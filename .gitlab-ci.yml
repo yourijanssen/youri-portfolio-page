@@ -1,5 +1,7 @@
 image: ruby:2.7
 pages:
+  tags:
+    - hva
   script:
     - gem install bundler
     - bundle install
