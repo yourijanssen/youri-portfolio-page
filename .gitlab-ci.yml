@@ -1,7 +1,7 @@
 image: ruby:2.7
 
 stages:
-  - test
+  - build
   - deploy
 
 workflow:
@@ -12,31 +12,27 @@ cache:
   paths:
     - vendor/
 
+
 before_script:
   - gem install bundler
-  - bundle install --path vendor
+  - bundle config set --local path 'vendor'
 
-pages:
+build-job:
+  stage: build
+  tags:
+    - hva
+  script:
+    - bundle exec jekyll build -d build
+  artifacts:
+    paths:
+      - build
+
+deploy-job:
   tags:
     - hva
   stage: deploy
   script:
-    - bundle exec jekyll build -d public
+    - bundle exec jekyll build -d deploy
   artifacts:
     paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-  environment: production
-
-test:
-  stage: test
-  tags:
-    - hva
-  script:
-    - bundle exec jekyll build -d test
-  artifacts:
-    paths:
-      - test
-  rules:
-    - if: $CI_COMMIT_BRANCH != "main"
+      - deploy
