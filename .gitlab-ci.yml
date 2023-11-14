@@ -1,5 +1,6 @@
 image: ruby:2.7
-
+  tags:
+    - hva
 workflow:
   rules:
     - if: $CI_COMMIT_BRANCH
