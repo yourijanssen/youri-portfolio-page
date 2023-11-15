@@ -1,11 +1,23 @@
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.aboutContainer {
   background-color: #ECE3CE;
-  padding: 0 20px; /* Add padding to the sides of the text */
-  text-align: center; /* Center the text horizontally */
-  line-height: 1.5; /* Adjust line height for better readability */
-  max-width: 600px; /* Set a maximum width for the text to prevent it from becoming too wide */
-  margin: 0 auto; /* Center the element within its container */
+  text-align: center;
+  height: 100%; /* Set height to 100% */
+  background-color: #ECE3CE;
+  margin: 0 auto;
+
+}
+
+.aboutTitle {
+  background-color: black; /* Deep blue color */
+  color: white;
+  height: 70px; /* Increased height for a more prominent look */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
+  font-size: 24px; /* Larger font size for emphasis */
+  font-weight: bold; /* Bold text for emphasis */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
 }

@@ -1,25 +1,53 @@
 /* projects.component.css */
 .project-page {
-  padding: 20px;
   background-color: #3A4D39;
 }
 
+  .projectTitle {
+    background-color: black; /* Deep blue color */
+    color: white;
+    height: 70px; /* Increased height for a more prominent look */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text for emphasis */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
+  }
+
 .projects-container {
-  max-width: 600px;
-  margin: 0 auto;
   text-align: center;
   background-color: #ECE3CE;
 }
 
 .project-card {
-  border: 4px solid #ddd;
+  border-radius: 15px; /* Slightly reduced border-radius for a softer look */
   text-align: left;
-  margin-inline-start: 10%;
-  margin-inline-end: 10%;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #739072;
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  background-color: #739072; /* A greenish color for a fresh and vibrant feel */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for transform and box-shadow */
+
+  /* Hover effect */
+  transform: scale(1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  /* Hover state */
+  &:hover {
+    transform: scale(1.05); /* Increase scale on hover for a subtle zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover for depth */
+  }
+}
+
+.projectName {
+  font-size: 15px;
+  font-weight: bold;
+
 }
 
 .project-card:hover {
@@ -28,7 +56,7 @@
 
 a {
   text-decoration: none;
-  color: #007BFF;
+  color: #EBF3E8;
   display: block;
   margin-top: 10px;
 }

@@ -1,1 +1,43 @@
-<p>homepage works!</p>
+<!-- homepage.component.html -->
+<div class="homepage-container">
+  <div class="profile-info">
+    <div class="introduction">
+      <h2 class="homeTitle">Welcome to my Portfolio</h2>
+
+      <a
+        href="https://github.com/yourijanssen"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="assets/ffffSquare-fotor-20231014131645.png"
+          alt="GitHub Profile"
+          class="profile-image"
+        />
+      </a>
+      <h3 class="myName">{{ person.name }}</h3>
+      <p class="jobTitle">Type: {{ person.type }}</p>
+    </div>
+    <div class="Languages">
+      <h4>Languages:</h4>
+      <ul>
+        <li *ngFor="let language of person.languages">{{ language }}</li>
+      </ul>
+
+      <h4>Other Tools:</h4>
+      <ul>
+        <li *ngFor="let tool of person.otherTools">{{ tool }}</li>
+      </ul>
+    </div>
+
+    diviv
+    <h4>Projects:</h4>
+    <ul>
+      <li *ngFor="let project of person.projects">{{ project }}</li>
+    </ul>
+
+    <p>
+      GitHub: <a [href]="person.github" target="_blank">{{ person.github }}</a>
+    </p>
+  </div>
+</div>
