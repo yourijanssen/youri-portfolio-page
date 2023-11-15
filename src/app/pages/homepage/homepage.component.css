@@ -4,6 +4,7 @@
 
     .homepage-container {
       background-color: #ECE3CE;
+    ;
     }
 
 /* Updated Style for .homeTitle */
@@ -23,29 +24,39 @@
   position: relative; /* Added position relative for absolute positioning of the text */
 }
 
+.profile-image {
+  max-width: 20%;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect on hover */
+  position: absolute;
+  margin-inline-start: 70%;
+}
+
+
+.profile-image:hover {
+  transform: scale(1.04); /* Enlarge the image on hover for an interactive effect */
+  filter: brightness(90%); /* Adjust brightness on hover for a subtle effect */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+  display: block;
+}
+
 .myName {
   font-size: 28px; /* Adjust font size */
-  color: #001524; /* Set text color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  color: black; /* Set text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
   font-weight: bold; /* Make the text bold */
   margin-bottom: 10px; /* Add spacing at the bottom */
-  letter-spacing: 1px; /* Increase letter spacing for a stylish look */
   text-transform: uppercase; /* Convert text to uppercase */
-  
 }
-    .profile-image {
-      max-width: 20%;
-      transition: transform 0.3s ease-in-out; /* Add a smooth transition effect on hover */
-      position: absolute;
-      margin-inline-start: 70%;
-    }
-    
-    
-    .profile-image:hover {
-      transform: scale(1.04); /* Enlarge the image on hover for an interactive effect */
-      filter: brightness(90%); /* Adjust brightness on hover for a subtle effect */
-      cursor: pointer; /* Change cursor to indicate interactivity */
-    }
+
+.jobTitle {
+  font-size: 18px; /* Adjust font size */
+}
+
+.Languages {
+
+}
+
+
 
 
     
