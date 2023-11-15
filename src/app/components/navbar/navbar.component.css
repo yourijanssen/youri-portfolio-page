@@ -1,4 +1,4 @@
-/* navbar.component.css */
+/* the container for entire navbar*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,11 +9,13 @@
   height: 50px;
 }
 
+/* the size of the logo itself */
 .logo {
   height: 150px;
   width: 150px;
 }
 
+/* the menu burger button */
 .menu-button {
   display: none;
   font-size: 1.5em;
@@ -24,6 +26,7 @@
   color: white;
 }
 
+/* The UL list of the 3 navbar links, project, about, contact */
 .nav-links {
   display: flex;
   list-style: none;
@@ -35,6 +38,7 @@
   color: white;
 }
 
+/* The link elements from the links */
 .nav-links a {
   text-decoration: none;
   color: white;

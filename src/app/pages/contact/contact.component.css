@@ -1,0 +1,41 @@
+/* contact.component.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-fullpage {
+
+  justify-content: center;
+  align-items: center;  
+  height: 100%;
+  background-color: #3A4D39;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Set height to 100% */
+  max-width: 600px;
+  background-color: #ECE3CE;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the total height/width */
+}
+
+    .contact-fullpage {
+      background-color: #3A4D39;
+
+    }
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}

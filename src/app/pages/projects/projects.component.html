@@ -1,1 +1,13 @@
-<p>projects works!</p>
+<!-- projects.component.html -->
+<div class="project-page">
+  <div class="projects-container">
+    <h2>My Projects</h2>
+
+    <div *ngFor="let project of projects" class="project-card">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <p>Technologies Used: {{ project.technologies }}</p>
+      <a [href]="project.url" target="_blank">Visit Project</a>
+    </div>
+  </div>
+</div>

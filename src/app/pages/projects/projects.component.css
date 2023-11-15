@@ -1,0 +1,38 @@
+/* projects.component.css */
+.project-page {
+  padding: 20px;
+  background-color: #3A4D39;
+}
+
+.projects-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ECE3CE;
+}
+
+.project-card {
+  border: 4px solid #ddd;
+  text-align: left;
+  margin-inline-start: 10%;
+  margin-inline-end: 10%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #739072;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Enlarge the project card on hover */
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  display: block;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline; /* Add an underline effect on hover */
+}

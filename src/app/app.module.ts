@@ -8,8 +8,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { MatIconModule } from '@angular/material/icon';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     ProjectsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MatIconModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
