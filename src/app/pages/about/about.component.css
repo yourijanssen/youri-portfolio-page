@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 17px;
+    margin-bottom: 50px;
 }
 
 .aboutSummery img {
@@ -41,6 +42,33 @@
     }
 }
 
+.downarrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #2cb9c3; /* Set the color of the arrow */
+    margin: auto;
+    animation: bounce 2s alternate;
+}
+
+/* Optional: Add a bounce animation */
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
 .aboutIntroduction {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
@@ -51,66 +79,14 @@
 
 .aboutIntroduction::before {
     content: '\201C'; /* Left double quotation mark */
-    font-size: 3em;
-    color: #7f8c8d;
+    color: #2cb9c3;
+    font-size: 1.5em;
     margin-right: 0.1em;
 }
 
 .aboutIntroduction::after {
     content: '\201D'; /* Right double quotation mark */
-    font-size: 3em;
-    color: #7f8c8d;
+    font-size: 1.5em;
+    color: #2cb9c3;
     margin-left: 0.1em;
-}
-
-.aboutIntroduction::first-letter {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-right: 0.1em;
-    color: #3498db;
-}
-
-.aboutIntroduction a {
-    color: #e74c3c;
-    text-decoration: none;
-    border-bottom: 2px solid #e74c3c;
-    transition: border-bottom 0.3s ease;
-}
-
-.aboutIntroduction a:hover {
-    border-bottom: 2px solid #3498db;
-}
-
-.aboutIntroduction p {
-    margin-bottom: 20px;
-}
-
-.aboutIntroduction em {
-    font-style: italic;
-    color: #27ae60;
-}
-
-.aboutIntroduction strong {
-    font-weight: bold;
-}
-
-.aboutIntroduction span.highlight {
-    background-color: #f39c12;
-    color: #fff;
-    padding: 3px;
-    border-radius: 3px;
-}
-
-.aboutIntroduction .interests {
-    margin-top: 20px;
-    font-size: 1.1em;
-    font-style: italic;
-    color: #2c3e50;
-}
-
-.aboutIntroduction .closing {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #e74c3c;
 }

@@ -1,10 +1,3 @@
-/* projects.component.css */
-.project-page {
-    background-color: #ece3ce;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
 .projectTitle {
     background-color: black;
     color: white;
@@ -19,73 +12,48 @@
     font-weight: bold;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-
-.project-card {
-    margin-top: 25px;
-    padding: 20px;
-    background-color: #d2e3c8;
-}
-
-.project-card-details {
-}
-
-.project-card-images {
+.project-container {
+    background-color: #ece3ce;
 }
 
 .project-info {
-    width: 100%;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #d2e3c8;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.project-images {
-    width: 100%;
+.ImageProject {
+    position: absolute;
+    height: 100%; /* Make the images cover the entire height of the container */
+    width: 100%; /* Make the images cover the entire width of the container */
 }
 
-.Image1,
-.Image2,
-.Image3 {
-    margin-left: 1000px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-    width: 100%;
-    transform-origin: top left;
+.ImageProject:nth-child(1) {
+    top: 0; /* Adjust the top and left values to control the overlap */
+    left: 0;
+    z-index: 3; /* Adjust the z-index to control the stacking order */
 }
 
-.Image1 {
-    z-index: 3;
-    transform: translateX(0);
-    width: 200px;
-    height: 300px;
+.ImageProject:nth-child(2) {
+    top: 20px; /* Adjust the top and left values to control the overlap */
+    left: 20px;
+    z-index: 2; /* Adjust the z-index to control the stacking order */
 }
 
-.Image2 {
-    z-index: 2;
-    transform: translateX(20px); /* Adjust the horizontal spacing */
-    width: 200px;
-    height: 300px;
+.ImageProject:nth-child(3) {
+    top: 40px; /* Adjust the top and left values to control the overlap */
+    left: 40px;
+    z-index: 1; /* Adjust the z-index to control the stacking order */
 }
 
-.Image3 {
-    z-index: 1;
-    transform: translateX(40px); /* Adjust the horizontal spacing */
-    width: 200px;
-    height: 300px;
-}
-
-.projectName {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-    color: #ebf3e8;
-    display: block;
-    margin-top: 10px;
-}
-
-a:hover {
-    text-decoration: underline;
+.imageContainer {
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    height: 300px; /* Adjust the height and width according to your needs */
+    width: 500px;
 }
