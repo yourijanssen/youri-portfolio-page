@@ -1,66 +1,91 @@
 /* projects.component.css */
 .project-page {
-  background-color: #3A4D39;
+    background-color: #ece3ce;
 }
 
-  .projectTitle {
-    background-color: black; /* Deep blue color */
+.projectTitle {
+    background-color: black;
     color: white;
-    height: 70px; /* Increased height for a more prominent look */
+    height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
-    font-size: 24px; /* Larger font size for emphasis */
-    font-weight: bold; /* Bold text for emphasis */
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
-  }
-
-.projects-container {
-  text-align: center;
-  background-color: #ECE3CE;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .project-card {
-  border-radius: 15px; /* Slightly reduced border-radius for a softer look */
-  text-align: left;
-  margin-inline-start: 5%;
-  margin-inline-end: 5%;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #739072; /* A greenish color for a fresh and vibrant feel */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for transform and box-shadow */
+    position: relative;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #d2e3c8;
+}
 
-  /* Hover effect */
-  transform: scale(1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.project-card-details {
+}
 
-  /* Hover state */
-  &:hover {
-    transform: scale(1.05); /* Increase scale on hover for a subtle zoom effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover for depth */
-  }
+.project-card-images {
+}
+
+.project-info {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-images {
+    position: relative;
+    width: 100%;
+}
+
+.Image1,
+.Image2,
+.Image3 {
+    margin-left: 1000px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    transform-origin: top left;
+}
+
+.Image1 {
+    z-index: 3;
+    transform: translateX(0);
+    width: 200px;
+    height: 300px;
+}
+
+.Image2 {
+    z-index: 2;
+    transform: translateX(20px); /* Adjust the horizontal spacing */
+    width: 200px;
+    height: 300px;
+}
+
+.Image3 {
+    z-index: 1;
+    transform: translateX(40px); /* Adjust the horizontal spacing */
+    width: 200px;
+    height: 300px;
 }
 
 .projectName {
-  font-size: 15px;
-  font-weight: bold;
-
-}
-
-.project-card:hover {
-  transform: scale(1.05); /* Enlarge the project card on hover */
+    font-size: 15px;
+    font-weight: bold;
 }
 
 a {
-  text-decoration: none;
-  color: #EBF3E8;
-  display: block;
-  margin-top: 10px;
+    text-decoration: none;
+    color: #ebf3e8;
+    display: block;
+    margin-top: 10px;
 }
 
 a:hover {
-  text-decoration: underline; /* Add an underline effect on hover */
+    text-decoration: underline;
 }

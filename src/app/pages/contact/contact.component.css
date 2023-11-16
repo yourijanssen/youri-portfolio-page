@@ -1,43 +1,42 @@
 /* contact.component.css */
 
 .contact-container {
-  text-align: center;
-  height: 100%; /* Set height to 100% */
-  background-color: #ECE3CE;
-
+    text-align: center;
+    height: 100%; /* Set height to 100% */
+    background-color: #ece3ce;
 }
 .contactTitle {
-  background-color: black; /* Deep blue color */
-  color: white;
-  height: 70px; /* Increased height for a more prominent look */
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase; /* Uppercase text */
-  letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
-  font-size: 24px; /* Larger font size for emphasis */
-  font-weight: bold; /* Bold text for emphasis */
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
+    background-color: black; /* Deep blue color */
+    color: white;
+    height: 70px; /* Increased height for a more prominent look */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text for emphasis */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
 }
 
 .contactText {
-  text-align: center; /* Center the text horizontally */
-  font-size: 18px; /* Adjusted font size for better readability */
-  color: black; /* Darkened text color for contrast */
-  font-weight: bold; /* Added bold font weight for emphasis */
-  max-width: 600px; /* Set a maximum width for better readability on larger screens */
-  margin: 0 auto; /* Center the text horizontally */
+    text-align: center; /* Center the text horizontally */
+    font-size: 18px; /* Adjusted font size for better readability */
+    color: black; /* Darkened text color for contrast */
+    font-weight: bold; /* Added bold font weight for emphasis */
+    max-width: 600px; /* Set a maximum width for better readability on larger screens */
+    margin: 0 auto; /* Center the text horizontally */
 }
 .contact-details {
-  margin-top: 40px; /* Increased margin for better spacing */
-  text-align: center; /* Center the text horizontally */
+    margin-top: 40px; /* Increased margin for better spacing */
+    text-align: center; /* Center the text horizontally */
 }
 
 .contact-details p {
-  margin-top: 40px; /* Increased margin for better spacing */
-  text-align: center; /* Center the text horizontally */
-  margin: 10px 0; /* Increased vertical margin for better separation */
-  font-size: 16px; /* Adjusted font size for better readability */
-  color: #333; /* Darkened text color for contrast */
+    margin-top: 40px; /* Increased margin for better spacing */
+    text-align: center; /* Center the text horizontally */
+    margin: 10px 0; /* Increased vertical margin for better separation */
+    font-size: 16px; /* Adjusted font size for better readability */
+    color: #333; /* Darkened text color for contrast */
 }
