@@ -21,12 +21,19 @@
     justify-content: space-between;
     margin-top: 25px;
     padding: 20px;
-    background-color: #d2e3c8;
-    margin-left: 15%;
-    margin-right: 15%;
+    background-color: #ece3ce;
+    border-bottom: 2px solid black; /* Add a bottom border */
 }
 
-.ImageProject {
+/* Style for the last project card to remove the bottom border */
+.project-info:last-child {
+    border-bottom: none;
+}
+
+.project-card-details {
+    margin-left: 10%;
+}
+.ImageGroup {
     position: absolute;
     height: 100%; /* Make the images cover the entire height of the container */
     width: 100%; /* Make the images cover the entire width of the container */
@@ -56,4 +63,10 @@
     position: relative;
     height: 300px; /* Adjust the height and width according to your needs */
     width: 500px;
+    margin-right: 10%;
+}
+
+.project-separator {
+    border: 1px solid black;
+    width: 100%;
 }

@@ -39,19 +39,3 @@
     cursor: pointer; /* Change cursor to indicate interactivity */
     display: block;
 }
-
-.myName {
-    font-size: 28px; /* Adjust font size */
-    color: black; /* Set text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
-    font-weight: bold; /* Make the text bold */
-    margin-bottom: 10px; /* Add spacing at the bottom */
-    text-transform: uppercase; /* Convert text to uppercase */
-}
-
-.jobTitle {
-    font-size: 18px; /* Adjust font size */
-}
-
-.Languages {
-}
