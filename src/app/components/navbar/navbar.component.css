@@ -3,17 +3,56 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4f6f52;
-    color: white;
+    background-color: #ece3ce;
+    color: black;
     width: 100%;
-    height: 50px;
-    margin-bottom: -20px;
+    height: 60px;
 }
 
-/* the size of the logo itself */
-.logo {
-    height: 150px;
-    width: 150px;
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbarTitle {
+    height: 60px;
+    padding-top: 25px;
+    width: 200px;
+    font-size: 24px; /* Increase the font size */
+    text-align: center; /* Center-align the text */
+    text-decoration: none;
+    /* Add a subtle animation to the text */
+    animation: colorChange 5s infinite alternate;
+}
+
+/* Keyframes for the color change animation */
+@keyframes colorChange {
+    0% {
+        color: black; /* Start with white color */
+    }
+    50% {
+        color: #3a4d39; /* Change to a different color at 50% */
+    }
+    100% {
+        color: #739072; /* End with white color */
+    }
+}
+
+/* Add a pseudo-element for decorative underline */
+.navbarTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+/* Adjust the width of the underline on hover */
+.navbarTitle:hover::after {
+    width: 50%;
 }
 
 /* the menu burger button */
@@ -21,27 +60,27 @@
     display: none;
     font-size: 1.5em;
     cursor: pointer;
-    background-color: #4f6f52;
+    background-color: #ece3ce;
     border: none;
     margin-right: 20px;
-    color: white;
 }
 
 /* The UL list of the 3 navbar links, project, about, contact */
 .nav-links {
     display: flex;
     list-style: none;
+    color: black;
 }
 
 .nav-links li {
     margin-right: 20px;
-    color: white;
 }
 
 /* The link elements from the links */
 .nav-links a {
     text-decoration: none;
-    color: #ebf3e8;
+    color: black;
+    font-size: 20px;
     padding: 10px;
     display: inline-block;
     position: relative;
@@ -60,7 +99,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #ebf3e8;
+        background-color: black;
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.3s ease-in-out;
@@ -82,7 +121,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #4f6f52;
+        background-color: #ece3ce;
     }
 
     .nav-links.show {

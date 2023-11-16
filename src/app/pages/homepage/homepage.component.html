@@ -1,41 +1,35 @@
 <!-- homepage.component.html -->
-<div class="homepage-container">
-  <div class="profile-info">
-    <div class="introduction">
-      <h2 class="homeTitle">Welcome to my Portfolio</h2>
+<div class="home-page">
+    <h2 class="homeTitle">Welcome to my Portfolio</h2>
+    <p class="homeText">
+        This is my portfolio. Here you can find information about me, my projects and my contact
+        information.
+    </p>
 
-      <div class="profile-image-container">
-        <a
-          href="https://github.com/yourijanssen"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="assets/ffffSquare-fotor-20231014131645.png"
-            alt="no image"
-            class="profile-image"
-          />
+    <div class="introduction">
+        <a href="https://github.com/yourijanssen" target="_blank" rel="noopener noreferrer">
+            <img
+                src="assets/ffffSquare-fotor-20231014131645.png"
+                alt="no image"
+                class="profile-image" />
         </a>
-        <div class="profile-image-tooltip">Visit GitHub Profile</div>
-      </div>
-      <h3 class="myName">{{ person.name }}</h3>
-      <p class="jobTitle">Type: {{ person.type }}</p>
+        <h3 class="myName">{{ person.name }}</h3>
+        <p class="jobTitle">Type: {{ person.type }}</p>
     </div>
     <div class="Languages">
-      <h4>Languages:</h4>
-      <ul>
-        <li *ngFor="let language of person.languages">{{ language }}</li>
-      </ul>
+        <h4>Languages:</h4>
+        <ul>
+            <li *ngFor="let language of person.languages">{{ language }}</li>
+        </ul>
 
-      <h4>Other Tools:</h4>
-      <ul>
-        <li *ngFor="let tool of person.otherTools">{{ tool }}</li>
-      </ul>
+        <h4>Other Tools:</h4>
+        <ul>
+            <li *ngFor="let tool of person.otherTools">{{ tool }}</li>
+        </ul>
     </div>
 
     <h4>Projects:</h4>
     <ul>
-      <li *ngFor="let project of person.projects">{{ project }}</li>
+        <li *ngFor="let project of person.projects">{{ project }}</li>
     </ul>
-  </div>
 </div>
