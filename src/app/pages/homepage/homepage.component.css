@@ -1,5 +1,7 @@
-.home-page {
+.home-container {
     background-color: #ece3ce;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /* Updated Style for .homeTitle */

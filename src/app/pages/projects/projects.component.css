@@ -1,6 +1,8 @@
 /* projects.component.css */
 .project-page {
     background-color: #ece3ce;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .projectTitle {

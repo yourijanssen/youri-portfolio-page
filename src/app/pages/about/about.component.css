@@ -1,7 +1,3 @@
-.aboutContainer {
-    background-color: #ece3ce;
-}
-
 .aboutTitle {
     background-color: black; /* Deep blue color */
     color: white;
@@ -16,6 +12,34 @@
     font-weight: bold; /* Bold text for emphasis */
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
 }
+.aboutContainer {
+    background-color: #ece3ce;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.aboutSummery {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.aboutSummery img {
+    height: 220px;
+    width: 220px;
+}
+
+@media screen and (max-width: 600px) {
+    .aboutSummery {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+        font-size: 15px;
+    }
+
+    .aboutSummery img {
+        margin-top: 10px; /* Optional: Add some space between text and image */
+    }
+}
 
 .aboutIntroduction {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,8 +47,6 @@
     line-height: 1.6;
     color: #333;
     text-align: justify;
-    margin-left: 15%;
-    margin-right: 15%;
 }
 
 .aboutIntroduction::before {

@@ -1,23 +1,22 @@
 <!-- projects.component.html -->
+<h2 class="projectTitle">"My Projects"</h2>
 <div class="project-page">
-  <div class="projects-container">
-    <h2 class="projectTitle">"My Projects"</h2>
-
-    <!-- project card container -->
-    <div *ngFor="let project of projects" class="project-card">
-      <!-- project details of projects -->
-      <div class="project-card-details">
-        <h3 class="projectName">{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <p>Technologies Used: {{ project.technologies }}</p>
-        <a [href]="project.url" target="visit">Visit Project</a>
-      </div>
-      <!-- images of projects -->
-      <div class="project-card-images">
-        <img class="Image1" [src]="project.img1" alt="no image" />
-        <img class="Image2" [src]="project.img2" alt="no image" />
-        <img class="Image3" [src]="project.img3" alt="no image" />
-      </div>
+    <div class="projects-container">
+        <!-- project card container -->
+        <div *ngFor="let project of projects" class="project-card">
+            <!-- project details of projects -->
+            <div class="project-card-details">
+                <h3 class="projectName">{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <p>Technologies Used: {{ project.technologies }}</p>
+                <a [href]="project.url" target="visit">Visit Project</a>
+            </div>
+            <!-- images of projects -->
+            <div class="project-card-images">
+                <img class="Image1" [src]="project.img1" alt="no image" />
+                <img class="Image2" [src]="project.img2" alt="no image" />
+                <img class="Image3" [src]="project.img3" alt="no image" />
+            </div>
+        </div>
     </div>
-  </div>
 </div>
