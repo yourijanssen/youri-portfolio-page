@@ -7,3 +7,7 @@ body {
     background-color: #ece3ce;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+body.menu-open {
+    overflow: hidden !important; /* Use !important to ensure it takes precedence */
+}
