@@ -23,6 +23,8 @@
     padding: 20px;
     background-color: #ece3ce;
     border-bottom: 2px solid black; /* Add a bottom border */
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Style for the last project card to remove the bottom border */
@@ -31,42 +33,24 @@
 }
 
 .project-card-details {
-    margin-left: 10%;
-}
-.ImageGroup {
-    position: absolute;
-    height: 100%; /* Make the images cover the entire height of the container */
-    width: 100%; /* Make the images cover the entire width of the container */
+    margin-right: 7%;
 }
 
-.ImageProject:nth-child(1) {
-    top: 0; /* Adjust the top and left values to control the overlap */
-    left: 0;
-    z-index: 3; /* Adjust the z-index to control the stacking order */
+.Image {
+    height: 300px; /* Make the images cover the entire height of the container */
+    width: 500px; /* Make the images cover the entire width of the container */
 }
 
-.ImageProject:nth-child(2) {
-    top: 20px; /* Adjust the top and left values to control the overlap */
-    left: 20px;
-    z-index: 2; /* Adjust the z-index to control the stacking order */
-}
+@media screen and (max-width: 800px) {
+    .project-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+        font-size: 15px;
+    }
 
-.ImageProject:nth-child(3) {
-    top: 40px; /* Adjust the top and left values to control the overlap */
-    left: 40px;
-    z-index: 1; /* Adjust the z-index to control the stacking order */
-}
-
-.imageContainer {
-    margin-right: 40px;
-    margin-bottom: 40px;
-    position: relative;
-    height: 300px; /* Adjust the height and width according to your needs */
-    width: 500px;
-    margin-right: 10%;
-}
-
-.project-separator {
-    border: 1px solid black;
-    width: 100%;
+    .Image {
+        margin-top: 10px; /* Optional: Add some space between text and image */
+        height: 200px;
+        width: 350px;
+    }
 }

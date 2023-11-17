@@ -7,15 +7,17 @@
         <div class="project-card-details">
             <h3 class="projectName">{{ project.name }}</h3>
             <p>{{ project.description }}</p>
-            <p>Technologies Used: {{ project.technologies }}</p>
+            <p>
+                <b style="display: contents">Project description:</b>
+                {{ project.descriptionProject }}
+            </p>
+            <p>
+                <b style="display: contents">New technologies Learned:</b>
+                {{ project.technologies }}
+            </p>
             <a [href]="project.url" target="visit">View project source code</a>
         </div>
         <!-- images of projects -->
-        <div class="imageContainer">
-            <img class="ImageGroup" [src]="project.img1" alt="no image" />
-            <img class="ImageGroup" [src]="project.img2" alt="no image" />
-            <img class="ImageGroup" [src]="project.img3" alt="no image" />
-        </div>
+        <img class="Image" [src]="project.img1" alt="no image" />
     </div>
-    ander dingen
 </div>

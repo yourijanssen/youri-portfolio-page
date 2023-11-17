@@ -1,15 +1,19 @@
 <!-- homepage.component.html -->
 <h2 class="homeTitle">"My Portfolio"</h2>
 <div class="home-container">
-    Welcome to my portfolio page! Here you can find information about me and my projects. If you
-    have any questions or want to contact me, you can do so by visiting the contact page.
-
+    <p class="pageIntro">
+        Welcome to my portfolio page! Here you can find information about me and my projects. If you
+        have any questions or want to contact me, you can do so by visiting the contact page.
+    </p>
     <div class="introduction">
         <b style="display: contents">Name:</b> Youri Janssen <br />
         <b style="display: contents">Job title:</b> Junior Software Developer <br />
         <b style="display: contents">Born:</b> 1997 <br />
         <b style="display: contents">Location:</b> The Netherlands <br />
-        <b style="display: contents">Education:</b> Associate Degree Software Development
+        <b style="display: contents">Previous Education:</b> Bachelor of Arts, Arts & Economics at
+        HKU <br />
+        <b style="display: contents">Current Education:</b> Associate Degree, Software Development
+        at HVA
         <br />
         <b style="display: contents">Hobbies:</b> Cycling, Gaming, Exploring, Travelling, Coding
         <br />
@@ -27,25 +31,25 @@
                 class="profile-image" />
         </a>
     </div>
-
-    ander dingen
+    <div class="projects-container">
+        <!-- project card container -->
+        <div *ngFor="let project of projects" class="project-info">
+            <!-- project details of projects -->
+            <div class="project-card-details">
+                <h3 class="projectName">{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <p>
+                    <b style="display: contents">Project description:</b>
+                    {{ project.descriptionProject }}
+                </p>
+                <p>
+                    <b style="display: contents">New technologies Learned:</b>
+                    {{ project.technologies }}
+                </p>
+                <a [href]="project.url" target="visit">View project source code</a>
+            </div>
+            <!-- images of projects -->
+            <img class="Image" [src]="project.img1" alt="no image" />
+        </div>
+    </div>
 </div>
-
-<!-- <h3 class="myName">{{ person.name }}</h3>
-        <p class="jobTitle">Type: {{ person.type }}</p>
-        <h4>Languages:</h4>
-        <ul>
-            <li *ngFor="let language of person.languages">{{ language }}</li>
-        </ul>
-
-        <h4>Other Tools:</h4>
-        <ul>
-            <li *ngFor="let tool of person.otherTools">{{ tool }}</li>
-        </ul>
-
-        <a href="https://github.com/yourijanssen" target="_blank" rel="noopener noreferrer">
-            <img
-                src="assets/ffffSquare-fotor-20231014131645.png"
-                alt="no image"
-                class="profile-image" />
-        </a> -->

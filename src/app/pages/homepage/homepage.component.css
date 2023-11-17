@@ -19,6 +19,14 @@
     margin-right: 15%;
 }
 
+.pageIntro {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
 .introduction {
     display: flex;
     justify-content: space-between;
@@ -38,4 +46,52 @@
     filter: brightness(90%); /* Adjust brightness on hover for a subtle effect */
     cursor: pointer; /* Change cursor to indicate interactivity */
     display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .introduction {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+        font-size: 15px;
+    }
+
+    .profile-image {
+        margin-top: 10px; /* Optional: Add some space between text and image */
+    }
+}
+
+.project-container {
+    background-color: #ece3ce;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #ece3ce;
+    border-top: 2px solid black;
+}
+
+.project-card-details {
+    margin-right: 7%;
+}
+
+.Image {
+    height: 300px; /* Make the images cover the entire height of the container */
+    width: 500px; /* Make the images cover the entire width of the container */
+}
+
+@media screen and (max-width: 800px) {
+    .project-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+        font-size: 15px;
+    }
+
+    .Image {
+        margin-top: 10px; /* Optional: Add some space between text and image */
+        height: 200px;
+        width: 350px;
+    }
 }
