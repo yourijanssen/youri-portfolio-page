@@ -67,7 +67,6 @@
 .project-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
     padding: 20px;
     background-color: #ece3ce;
     border-top: 2px solid black;

@@ -19,7 +19,6 @@
 .project-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
     padding: 20px;
     background-color: #ece3ce;
     border-bottom: 2px solid black; /* Add a bottom border */
