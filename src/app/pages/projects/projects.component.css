@@ -1,6 +1,6 @@
 .projectTitle {
-    background-color: black;
-    color: white;
+    background-color: #eebea3;
+    color: black;
     height: 100px;
     width: 100%;
     display: flex;
@@ -11,46 +11,4 @@
     font-size: 24px;
     font-weight: bold;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
-.project-container {
-    background-color: #ece3ce;
-}
-
-.project-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #ece3ce;
-    border-bottom: 2px solid black; /* Add a bottom border */
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-/* Style for the last project card to remove the bottom border */
-.project-info:last-child {
-    border-bottom: none;
-}
-
-.project-card-details {
-    margin-right: 7%;
-}
-
-.Image {
-    margin-top: 3%;
-    height: 300px; /* Make the images cover the entire height of the container */
-    width: 500px; /* Make the images cover the entire width of the container */
-}
-
-@media screen and (max-width: 800px) {
-    .project-info {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start of the container */
-        font-size: 15px;
-    }
-
-    .Image {
-        margin-top: 10px; /* Optional: Add some space between text and image */
-        height: 200px;
-        width: 350px;
-    }
 }

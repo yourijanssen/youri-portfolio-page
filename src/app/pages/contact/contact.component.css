@@ -1,12 +1,12 @@
 .contact-container {
-    background-color: #ece3ce;
+    background-color: #f9e6cf;
     margin-left: 15%;
     margin-right: 15%;
 }
 
 .contactTitle {
-    background-color: black; /* Deep blue color */
-    color: white;
+    background-color: #eebea3; /* Deep blue color */
+    color: black;
     height: 100px; /* Increased height for a more prominent look */
     width: 100%;
     display: flex;

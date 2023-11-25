@@ -4,8 +4,8 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background-color: #ece3ce;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f9e6cf;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 body.menu-open {
