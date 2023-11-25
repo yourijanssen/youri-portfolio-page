@@ -23,10 +23,25 @@
     text-align: center; /* Center the text horizontally */
     font-size: 18px; /* Adjusted font size for better readability */
     color: black; /* Darkened text color for contrast */
-    font-weight: bold; /* Added bold font weight for emphasis */
+
     max-width: 600px; /* Set a maximum width for better readability on larger screens */
     margin: 0 auto; /* Center the text horizontally */
 }
+
+.contactText::before {
+    content: '\201C'; /* Left double quotation mark */
+    color: #2cb9c3;
+    font-size: 1.5em;
+    margin-right: 0.1em;
+}
+
+.contactText::after {
+    content: '\201D'; /* Right double quotation mark */
+    font-size: 1.5em;
+    color: #2cb9c3;
+    margin-left: 0.1em;
+}
+
 .contact-details {
     margin-top: 40px; /* Increased margin for better spacing */
     text-align: center; /* Center the text horizontally */

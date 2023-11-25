@@ -1,74 +1,43 @@
-.aboutTitle {
-    background-color: #eebea3; /* Deep blue color */
-    color: black;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Increased letter spacing for a stylish touch */
-    font-size: 24px; /* Larger font size for emphasis */
-    font-weight: bold; /* Bold text for emphasis */
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
-}
-.aboutContainer {
-    background-color: #f9e6cf;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
+/* About Summary */
 .aboutSummery {
     display: flex;
     justify-content: space-between;
-    font-size: 17px;
-    margin-bottom: 50px;
 }
 
-.aboutSummery img {
+.text {
+}
+
+/* Image Styling */
+img {
+    padding-left: 50px;
     height: 220px;
     width: 220px;
 }
 
-@media screen and (max-width: 600px) {
+.full-text {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    padding: 2px;
+    width: 150px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
     .aboutSummery {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start of the container */
+        flex-direction: column;
+        align-items: flex-start;
         font-size: 15px;
     }
 
     .aboutSummery img {
-        margin-top: 10px; /* Optional: Add some space between text and image */
+        align-items: center;
+        align-self: center;
+        margin-top: 40px;
     }
-}
-
-/* Optional: Add a bounce animation */
-@keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-7px);
-    }
-}
-
-.aboutIntroduction::before {
-    content: '\201C'; /* Left double quotation mark */
-    color: #2cb9c3;
-    font-size: 1.5em;
-    margin-right: 0.1em;
-}
-
-.aboutIntroduction::after {
-    content: '\201D'; /* Right double quotation mark */
-    font-size: 1.5em;
-    color: #2cb9c3;
-    margin-left: 0.1em;
 }

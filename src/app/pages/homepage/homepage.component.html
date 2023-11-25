@@ -1,36 +1,11 @@
 <!-- homepage.component.html -->
 <h2 class="homeTitle">[ My Portfolio ]</h2>
-<div class="home-container">
-    <p class="pageIntro">
-        Welcome to my portfolio page! Here you can find information about me and my projects. If you
-        have any questions or want to contact me, you can do so by visiting the contact page.
-    </p>
-    <div class="introduction">
-        <b style="display: contents">Name:</b> Youri Janssen <br />
-        <b style="display: contents">Job title:</b> Junior Software Developer <br />
-        <b style="display: contents">Born:</b> 1997 <br />
-        <b style="display: contents">Location:</b> The Netherlands <br />
-        <b style="display: contents">Previous Education:</b> Bachelor of Arts, Arts & Economics at
-        HKU <br />
-        <b style="display: contents">Current Education:</b> Associate Degree, Software Development
-        at HVA
-        <br />
-        <b style="display: contents">Hobbies:</b> Cycling, Gaming, Exploring, Travelling, Coding
-        <br />
-        <b style="display: contents"> Native Programming Language:</b> Typescript <br />
-        <b style="display: contents">Framework and concept knowledge:</b> Object Oriented
-        Programming, Design Patterns, Unified Modeling Language, NodeJs/Express, Angular, Mocha/Chai
-        & Jasmine Testing, Relational Databases, MySql/Sequelize, HTML/CSS<br />
-        <b style="display: contents">Learning Goals:</b> Security, Cloudcomputing, Architectural
-        Patterns, New frameworks / programming languages & CI/CD <br />
-        <!-- home page image -->
-        <a href="https://github.com/yourijanssen" target="_blank" rel="noopener noreferrer">
-            <img
-                src="assets/ffffSquare-fotor-20231014131645.png"
-                alt="no image"
-                class="profile-image" />
-        </a>
-    </div>
-</div>
-<app-project></app-project>
+
+<p class="pageIntro">
+    Welcome to my portfolio page! Here you can find information about me and my projects. If you
+    have any questions or want to contact me, you can do so by visiting the contact page.
+</p>
+<app-info class="infoContainer"></app-info>
+
+<app-project class="projectContainer"></app-project>
 <app-footer></app-footer>

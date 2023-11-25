@@ -13,86 +13,47 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.home-container {
-    background-color: #f9e6cf;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
 .pageIntro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+
     margin-left: 10%;
     margin-right: 10%;
-    font-weight: bold;
     font-size: 20px;
     text-align: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-bottom: 2px solid black;
 }
 
-.introduction {
+.pageIntro::before {
+    content: '\201C'; /* Left double quotation mark */
+    color: #2cb9c3;
+    font-size: 1.5em;
+    margin-right: 0.1em;
+}
+
+.pageIntro::after {
+    content: '\201D'; /* Right double quotation mark */
+    font-size: 1.5em;
+    color: #2cb9c3;
+    margin-left: 0.1em;
+}
+
+.infoContainer {
     display: flex;
     justify-content: space-between;
-    font-size: 17px;
-    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.profile-image {
-    height: 220px;
-    width: 220px;
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect on hover */
-}
-
-.profile-image:hover {
-    transform: scale(1.04); /* Enlarge the image on hover for an interactive effect */
-    filter: brightness(90%); /* Adjust brightness on hover for a subtle effect */
-    cursor: pointer; /* Change cursor to indicate interactivity */
-    display: block;
-}
-
-@media screen and (max-width: 600px) {
-    .introduction {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start of the container */
-        font-size: 15px;
-    }
-
-    .profile-image {
-        margin-top: 10px; /* Optional: Add some space between text and image */
-    }
-}
-
-.project-container {
-    background-color: #ece3ce;
-}
-
-.project-info {
+.projectContainer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #f9e6cf;
-    border-top: 2px solid black;
-}
-
-.project-card-details {
-    margin-right: 7%;
-}
-
-.Image {
-    margin-top: 3%;
-    height: 300px; /* Make the images cover the entire height of the container */
-    width: 500px; /* Make the images cover the entire width of the container */
-}
-
-@media screen and (max-width: 800px) {
-    .project-info {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start of the container */
-        font-size: 15px;
-    }
-
-    .Image {
-        margin-top: 10px; /* Optional: Add some space between text and image */
-        align-self: center;
-        height: 200px;
-        width: 350px;
-    }
+    margin-left: 10%;
+    margin-right: 10%;
 }

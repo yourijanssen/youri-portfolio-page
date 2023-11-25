@@ -1,15 +1,8 @@
-.project-container {
-    background-color: #f9e6cf;
-}
-
 .project-info {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
     background-color: #f9e6cf;
     border-bottom: 2px solid black; /* Add a bottom border */
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 /* Style for the last project card to remove the bottom border */
@@ -21,20 +14,38 @@
     color: black;
     background-color: #bcd9c3;
     font-size: 30px;
-    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.projectDescription {
+    color: black;
+    background-color: #bcd9c3;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.technologies {
+    color: black;
+    background-color: #bcd9c3;
+    font-size: 17px;
     text-align: center;
     border-radius: 10px;
 }
 
 .project-card-details {
     margin-right: 7%;
+    height: 400px;
 }
 
-.Image {
-    margin-top: 3%;
-    align-self: center;
+.image {
     height: 300px; /* Make the images cover the entire height of the container */
     width: 500px; /* Make the images cover the entire width of the container */
+}
+
+.imagecontainer {
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 800px) {
@@ -49,5 +60,6 @@
         align-self: center;
         height: 200px;
         width: 350px;
+        align-self: center;
     }
 }

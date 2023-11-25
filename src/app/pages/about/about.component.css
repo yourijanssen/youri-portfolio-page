@@ -12,6 +12,16 @@
     font-weight: bold; /* Bold text for emphasis */
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow for depth */
 }
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .aboutContainer {
     background-color: #f9e6cf;
     margin-left: 15%;
