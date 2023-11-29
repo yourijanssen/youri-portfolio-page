@@ -13,7 +13,6 @@ export class NavbarComponent {
     toggleMenu(): void {
         this.isMenuOpen = !this.isMenuOpen;
 
-        // Toggle the 'menu-open' class on the body
         if (this.isMenuOpen) {
             this.renderer.addClass(document.body, 'menu-open');
         } else {
@@ -23,8 +22,6 @@ export class NavbarComponent {
 
     closeMenu(): void {
         this.isMenuOpen = false;
-
-        // Remove the 'menu-open' class on closing the menu
         this.renderer.removeClass(document.body, 'menu-open');
     }
 }

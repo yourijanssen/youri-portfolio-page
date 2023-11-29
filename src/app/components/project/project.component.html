@@ -13,7 +13,15 @@
         <a [href]="project.url" target="visit">View project source code</a>
     </div>
     <div class="imagecontainer">
-        <!-- images of projects -->
-        <img class="image" [src]="project.img1" alt="no image" />
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <!-- Images of projects -->
+            <img
+                *ngFor="let image of getImages(project); let i = index"
+                class="image"
+                [src]="image"
+                alt="no image"
+                [ngClass]="{ active: i === currentImageIndex }" />
+        </div>
     </div>
 </div>

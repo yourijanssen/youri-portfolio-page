@@ -1,58 +1,64 @@
-/* the container for entire navbar*/
+/* Navbar Container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f9e6cf;
     color: black;
-    width: 100%;
     height: 100px;
+    padding: 0 20px; /* Adjust padding for better spacing */
 }
 
-img {
+/* Logo */
+.logo {
     height: 90px;
     width: 150px;
 }
-.navbar a {
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* Common styles for navigation links */
+.navlink {
     text-decoration: none;
     color: black;
-    margin-left: 10%;
-    margin-top: 20px;
-    font-style: italic;
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Keyframes for the color change animation */
-@keyframes colorChange {
-    0% {
-        color: black; /* Start with white color */
-    }
-    50% {
-        color: #3a4d39; /* Change to a different color at 50% */
-    }
-    100% {
-        color: #739072; /* End with white color */
-    }
-}
-
-/* Add a pseudo-element for decorative underline */
-.navbarTitle::after {
+/* Underline effect on hover */
+.navlink::before {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 0;
     width: 100%;
     height: 2px;
-    transform: translateX(-50%);
-    transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Adjust the width of the underline on hover */
-.navbarTitle:hover::after {
-    width: 50%;
+.navlink:hover::before {
+    color: #001524;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-/* the menu burger button */
-.menu-button {
+/* Burger Menu Button (hidden on larger screens) */
+.burger-menu {
     display: none;
     font-size: 1.5em;
     cursor: pointer;
@@ -61,75 +67,25 @@ img {
     margin-right: 20px;
 }
 
-/* The UL list of the 3 navbar links, project, about, contact */
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin-top: -40px;
-    color: black;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-/* The link elements from the links */
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    padding: 10px;
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
-
-    /* Add a subtle underline effect on hover */
-    &:hover {
-        color: #001524; /* Change color on hover */
-    }
-
-    /* Add a bottom border for an underline effect */
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    /* Scale the underline effect on hover */
-    &:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-}
-
+/* Media Query for smaller screens */
 @media only screen and (max-width: 800px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 30px;
+        top: 100px;
         left: 0;
         width: 100%;
-        height: 100%;
-        background-color: #f9e6cf;
+        background-color: #eebea3;
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
     }
 
     .nav-links.show {
         display: flex;
     }
 
-    .nav-links li {
-        margin: 10px;
-    }
-
-    .menu-button {
+    .burger-menu {
         display: block;
     }
 }

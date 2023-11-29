@@ -1,13 +1,23 @@
 // projects.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+interface Project {
+    name: string;
+    description: string;
+    descriptionProject: string;
+    technologies: string;
+    url: string;
+    images: string[];
+    imagesMobile: string[];
+}
 
 @Component({
     selector: 'app-project',
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.css']
 })
-export class ProjectComponent {
-    projects = [
+export class ProjectComponent implements OnInit {
+    projects: Project[] = [
         {
             name: '[ Crowdfunding page ]',
             description:
@@ -18,7 +28,16 @@ export class ProjectComponent {
             technologies:
                 'VSCode, Plain HTML, CSS, JavaScript/Typescript, NPM, tsc (typescript compiler), MVC Pattern, Git, Gitlab,  MySQL Workbench, Nodemon, Figma',
             url: 'https://github.com/yourijanssen/MayoLama',
-            img1: 'assets/MayoLamaSite/MayoLamaP1.png'
+            images: [
+                'assets/MayoLamaSite/MayoLamaP1.png',
+                'assets/MayoLamaSite/MayoLamaP2.png',
+                'assets/MayoLamaSite/MayoLamaP3.png'
+            ],
+            imagesMobile: [
+                'assets/MayoLamaSite/MayoLamaP1.png',
+                'assets/MayoLamaSite/MayoLamaP2.png',
+                'assets/MayoLamaSite/MayoLamaP3.png'
+            ]
         },
         {
             name: '[ Forum page ]',
@@ -30,7 +49,16 @@ export class ProjectComponent {
             technologies:
                 'Angular, Node.js, Express.js, Sequelize, Mocha, Chai, Thunderclient, EsLint, Prettier, ts-node-dev, dotenv, mysql2',
             url: 'https://github.com/yourijanssen/AngularAmigos',
-            img1: 'assets/AngularAmigosSite/angularAmgigosPage1.png'
+            images: [
+                'assets/AngularAmigosSite/angularAmgigosPage1.png',
+                'assets/AngularAmigosSite/angularAmgigosPage2.png',
+                'assets/AngularAmigosSite/angularAmgigosPage3.png'
+            ],
+            imagesMobile: [
+                'assets/AngularAmigosSite/angularAmgigosPage1.png',
+                'assets/AngularAmigosSite/angularAmgigosPage2.png',
+                'assets/AngularAmigosSite/angularAmgigosPage3.png'
+            ]
         },
         {
             name: '[ Boat Rental ]',
@@ -42,8 +70,39 @@ export class ProjectComponent {
             technologies:
                 'REST API, Sequelize-Typescript, Sinon, Jasmine, Karma, Github, RxJs, Argon2, bycrypt, supertest, cookies',
             url: 'https://github.com/yourijanssen/boat-rental',
-            img1: 'assets/BoatRentelSite/BootverhuurP1.png'
+            images: [
+                'assets/BoatRentelSite/avontuurDesktop1.png',
+                'assets/BoatRentelSite/avontuurDesktop2.png',
+                'assets/BoatRentelSite/avontuurDesktop3.png'
+            ],
+            imagesMobile: [
+                'assets/BoatRentelSite/avontuurMobile1.png',
+                'assets/BoatRentelSite/avontuurMobile2.png',
+                'assets/BoatRentelSite/avontuurMobile3.png'
+            ]
         }
         // Add more projects as needed
     ];
+
+    getImages(project: Project): string[] {
+        return window.innerWidth < 800 ? project.imagesMobile : project.images;
+    }
+
+    currentProject: Project = this.projects[0]; // Initialize currentProject with the first project
+    currentImageIndex = 0;
+
+    ngOnInit(): void {
+        // Start the slideshow when the component initializes
+        this.startSlideshow();
+    }
+
+    startSlideshow(): void {
+        setInterval(() => {
+            this.showNextImage();
+        }, 3500); // Change image every 5 seconds (adjust as needed)
+    }
+
+    showNextImage(): void {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.currentProject.images.length;
+    }
 }

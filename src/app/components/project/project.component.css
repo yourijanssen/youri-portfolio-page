@@ -2,64 +2,89 @@
     display: flex;
     justify-content: space-between;
     background-color: #f9e6cf;
-    border-bottom: 2px solid black; /* Add a bottom border */
+    border-bottom: 2px solid black;
 }
 
-/* Style for the last project card to remove the bottom border */
 .project-info:last-child {
     border-bottom: none;
 }
 
+.project-card-details {
+    margin-right: 7%;
+    margin-bottom: 4%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
 .projectName {
+    display: flex;
+    justify-content: center;
     color: black;
     background-color: #bcd9c3;
-    font-size: 30px;
+    font-size: 25px;
+    align-items: center;
     text-align: center;
     border-radius: 10px;
+    height: 50px;
+    min-width: 280px;
+    width: 100%;
 }
 
 .projectDescription {
-    color: black;
-    background-color: #bcd9c3;
     font-size: 17px;
-    text-align: center;
-    border-radius: 10px;
 }
 
 .technologies {
-    color: black;
-    background-color: #bcd9c3;
     font-size: 17px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.project-card-details {
-    margin-right: 7%;
-    height: 400px;
-}
-
-.image {
-    height: 300px; /* Make the images cover the entire height of the container */
-    width: 500px; /* Make the images cover the entire width of the container */
 }
 
 .imagecontainer {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
-@media screen and (max-width: 800px) {
+/* Slideshow Container Styles */
+.slideshow-container {
+    display: flex;
+    max-width: 500px; /* Adjust max-width as needed */
+    margin: auto;
+}
+
+/* Individual Image Styles */
+.image {
+    height: 300px;
+    width: 500px;
+    margin-right: -100%; /* Negative margin to overlap images */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show the active image */
+.image.active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
     .project-info {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: flex-start; /* Align items to the start of the container */
         font-size: 15px;
+        padding-bottom: 5%;
     }
 
-    .Image {
-        margin-top: 10px; /* Optional: Add some space between text and image */
+    .imagecontainer {
+        margin-top: 0px;
+    }
+
+    .image {
+        height: 100%;
+        width: 100%;
         align-self: center;
-        height: 200px;
-        width: 350px;
-        align-self: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image {
+        width: 100%;
     }
 }

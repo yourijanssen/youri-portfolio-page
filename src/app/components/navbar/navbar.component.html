@@ -1,11 +1,23 @@
+<!-- Navbar Container -->
 <div class="navbar">
-    <a routerLink="/" (click)="closeMenu()">
-        <img src="assets/final logo.png" alt="no logo" />
+    <!-- Logo and Home Link -->
+    <a routerLink="/" class="logo-link" (click)="closeMenu()">
+        <img class="logo" src="assets/final logo.png" alt="no logo" />
     </a>
-    <button class="menu-button" (click)="toggleMenu()">☰</button>
+
+    <!-- Burger Menu Button -->
+    <button class="burger-menu" (click)="toggleMenu()">☰</button>
+
+    <!-- Navigation Links -->
     <ul class="nav-links" [ngClass]="{ show: isMenuOpen }">
-        <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
-        <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
-        <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+        <li>
+            <a class="navlink" routerLink="/projects" (click)="closeMenu()">Projects</a>
+        </li>
+        <li>
+            <a class="navlink" routerLink="/about" (click)="closeMenu()">About</a>
+        </li>
+        <li>
+            <a class="navlink" routerLink="/contact" (click)="closeMenu()">Contact</a>
+        </li>
     </ul>
 </div>
